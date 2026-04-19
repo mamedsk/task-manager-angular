@@ -1,0 +1,18 @@
+<a (click)="goBack()" class="text-decoration-none" style="cursor: pointer">< back </a>
+<div class="container mt-3 shadow border border-opacity-50  rounded h-75">
+  <div class="w-100 d-flex flex-column align-items-center mt-2">
+    <h2>{{task()?.title}}</h2>
+    <p>{{task()?.createdAt | date :"dd/mm/yyyy"}}</p>
+    <p>
+      @if(task()?.completed){
+        <p class="text-success fw-bold">Completed</p>
+      } @else {
+        <p class="text-warning fw-bold">Not completed</p>
+      }
+    </p>
+  </div>
+  <div class="w-100 h-auto">
+    <p>{{task()?.description}}</p>
+  </div>
+  <div></div>
+</div>
