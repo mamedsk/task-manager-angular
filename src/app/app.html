@@ -1,1 +1,28 @@
-<app-task></app-task>
+<div>
+  <nav class="navbar text-bg-success">
+    <div class="navbar-brand text-white">
+      <h2>Task Manager</h2>
+    </div>
+    <div class="nav-link w-25 m-2 d-flex flex-row justify-content-between">
+      <div >
+        <a routerLink="" class="btn text-white-50">Home</a>
+      </div>
+      <div>
+        <a routerLink="/add-task" class=" btn text-white-50"> Add task</a>
+      </div>
+
+
+    </div>
+  </nav>
+
+  <main class="vh-100">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="card-footer text-bg-secondary d-flex flex-row justify-content-center">
+    <div>
+      <p >all right are conserved </p>
+    </div>
+
+  </footer>
+</div>

@@ -1,0 +1,22 @@
+<div class="container mt-2 h-75 d-flex flex-column">
+  @for (task of taskService.tasks(); track  task.id){
+    <div class="card shadow-sm mt-2 p-2">
+      <div class="d-flex flex-row justify-content-between">
+        <h3>
+          <a [routerLink]="['/task-details',task.id]" [state]="{task}" class="text-decoration-none">{{task.title}}</a>
+        </h3>
+        <h6>
+          @if(task.completed){
+            <p class="text-success">Completed</p>
+          } @else {
+            <p class="text-warning">Not completed</p>
+          }
+        </h6>
+      </div>
+      <p class="w-50 h-50">
+        {{task.description}}
+      </p>
+      <small>Created At:{{task.createdAt | date :"dd/MM/yyyy"}}</small>
+    </div>
+  }
+</div>
